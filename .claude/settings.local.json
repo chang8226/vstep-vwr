@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(TARGET_ENV=staging npx playwright test tests/auth/login.spec.ts --reporter=list)",
+      "Bash(TARGET_ENV=dev node -e ' *)"
+    ]
+  }
+}
