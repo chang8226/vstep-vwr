@@ -20,6 +20,11 @@ interface EnvConfig {
     testDetailId: number;
     unitId: number;
   };
+  vsr: {
+    testDetailId: number;
+    unitId: number;
+    courseId: number;
+  };
 }
 
 export const environments: Record<Environment, EnvConfig> = {
@@ -35,6 +40,11 @@ export const environments: Record<Environment, EnvConfig> = {
       testDetailId: 13408,
       unitId: 9620,
     },
+    vsr: {
+      testDetailId: 13432,
+      unitId: 9640,
+      courseId: 7,
+    },
   },
   staging: {
     baseURL: 'https://app.prepstg.com/',
@@ -48,6 +58,11 @@ export const environments: Record<Environment, EnvConfig> = {
       testDetailId: 0, // TODO: cập nhật khi có id thực tế trên staging
       unitId: 0,
     },
+    vsr: {
+      testDetailId: 0, // TODO: cập nhật khi có id thực tế trên staging
+      unitId: 0,
+      courseId: 0,
+    },
   },
   pro: {
     baseURL: 'https://app.prepedu.com/',
@@ -60,6 +75,11 @@ export const environments: Record<Environment, EnvConfig> = {
     vstep: {
       testDetailId: 0, // TODO: cập nhật khi có id thực tế trên production
       unitId: 0,
+    },
+    vsr: {
+      testDetailId: 0, // TODO: cập nhật khi có id thực tế trên production
+      unitId: 0,
+      courseId: 0,
     },
   },
 };

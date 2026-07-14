@@ -5,6 +5,7 @@ import { HskTestPage } from '../pages/hsk/HskTestPage';
 import { LoginPage } from '../pages/auth/LoginPage';
 import { VstepPreviewPage } from '../pages/vstep/VstepPreviewPage';
 import { VstepTestPage } from '../pages/vstep/VstepTestPage';
+import { VsrPreviewPage } from '../pages/vstep/VsrPreviewPage';
 
 type PageFixtures = {
   loginPage: LoginPage;
@@ -13,6 +14,7 @@ type PageFixtures = {
   hskTestPage: HskTestPage;
   vstepPage: VstepPreviewPage;
   vstepTestPage: VstepTestPage;
+  vsrPage: VsrPreviewPage;
 };
 
 export const test = base.extend<PageFixtures>({
@@ -33,6 +35,9 @@ export const test = base.extend<PageFixtures>({
   },
   vstepTestPage: async ({ page }, use) => {
     await use(new VstepTestPage(page));
+  },
+  vsrPage: async ({ page }, use) => {
+    await use(new VsrPreviewPage(page));
   },
 });
 
